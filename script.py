@@ -1,7 +1,7 @@
 import os
 import yaml
 
-dct = yaml.load(os.environ["PATHS"],yaml.Loader)
+dct = yaml.load(os.environ["CHARTS"],yaml.Loader)
 
 # path/to/my/chart:
 #     dependencies:
