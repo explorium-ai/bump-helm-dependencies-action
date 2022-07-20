@@ -22,5 +22,6 @@ def set_version(path,dependency_name,version):
 for key in dct:
     print(key)
     for d in dct[key]["dependencies"]:
+        print(d)
         print(d["name"],d["version"])
         set_version(key,d["name"],d["version"])
