@@ -1,0 +1,22 @@
+name: 'Bump Helm Depdendencies'
+description: 'Bump Helm Depdendencies of Umbrella Chart.yaml files'
+branding:
+  icon: upload-cloud
+  color: blue
+inputs:
+  charts:
+    description: "Helm Charts to bump. Using the following Yaml Syntax"
+    required: true
+    default: ''
+runs:
+  using: "composite"
+  steps:
+    - run: python3 -m pip install gitpython
+      if: ${{ inputs.charts }} != ''
+      shell: bash
+
+    - run: python3 ${{ github.action_path }}/script.py
+      if: ${{ inputs.charts }} != ''
+      shell: bash
+      env:
+        CHARTS: ${{ inputs.charts }}
