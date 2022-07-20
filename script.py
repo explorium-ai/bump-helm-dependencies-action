@@ -6,7 +6,7 @@ dct = yaml.load(os.environ["CHARTS"],yaml.Loader)
 # path/to/my/chart:
 #     dependencies:
 #         - name: redis
-#         value: 1.0.4
+#           version: 1.0.4
 
 def set_version(path,dependency_name,version):
     with open(os.path.join(path,'Chart.yaml')) as f:

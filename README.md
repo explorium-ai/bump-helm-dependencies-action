@@ -16,11 +16,11 @@ Bump Helm Depdendencies using YAML configuration
       path/to/my/chart:
         dependencies:
           - name: redis
-            value: 1.0.4
+            version: 1.0.4
       path/to/my/second/chart:
         dependencies:
           - name: test
-            value: 2.3.4
+            version: 2.3.4
           - name: test2
-            value: 3.4.5
+            version: 3.4.5
 ```
