@@ -11,7 +11,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: python3 -m pip install gitpython
+    - run: python3 -m pip install gitpython yaml
       if: ${{ inputs.charts }} != ''
       shell: bash
 
